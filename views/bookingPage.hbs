@@ -1,0 +1,51 @@
+<div class="booking-container">
+    <h2>Boka en städning</h2>
+    <div class="booking-form-container">
+        <form class="booking-form" action="/book" method="post">
+            <div class="booking-form-wrapper">
+                <div class="time-cleanig-type-container">
+                    <div class="time-label-input">
+                        <label for="time">Tid</label>
+                        <input type="time" name="time" id="time" min="07:00" max="16:00" required>
+                    </div>
+                    <div class="label-input">
+                        <label for="cleaningType">Typ av städning</label>
+                        <select name="cleaningType" id="cleaningType" required>
+                            <option value="">-- Välj typ av städning --</option>
+                            <option value="basicStädning">Basic Städning</option>
+                            <option value="toppStädning">Topp Städning</option>
+                            <option value="diamantStädning">Diamant Städning</option>
+                            <option value="fönstertvät">Fönstertvät</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="label-input">
+                    <label for="address">Adress</label>
+                    <input type="text" name="address" id="address" required>
+                </div>
+                <div class="label-input">
+                    <label for="zipCode">Postnummer</label>
+                    <input type="text" name="zipCode" id="zipCode" required>
+                </div>
+                <div class="label-input">
+                    <label for="zlocation">Ort</label>
+                    <input type="text" name="location" id="location" required>
+                </div>
+                <div class="label-input">
+                    <label for="contactPerson">Kontaktperson</label>
+                    <input type="text" name="contactPerson" id="contactPerson" required>
+                </div>
+                <div class="label-input">
+                    <label for="contactPhone">Kontaktpersons telefonnummer</label>
+                    <input type="tel" name="contactPhone" id="contactPhone" required>
+                </div>
+                <div class="submit-container">
+                    <h3><a class="home" href="/">Tillbaka</a></h3>
+                    <input class="submit-button" type="submit" value="Boka">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
