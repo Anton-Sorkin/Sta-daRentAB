@@ -41,6 +41,9 @@ app.get("/", (req, res) => {
 });
 
 // ROUTES
+app.get("/userpage", (req, res) => {
+  res.render("userpage")
+})
 //all usable routes goes here
 
 // ERROR ROUTE
