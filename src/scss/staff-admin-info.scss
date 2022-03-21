@@ -1,0 +1,36 @@
+.staff-admin-info-wrapper {
+  width: 100vw;
+  height: 90vh;
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  .staff-admin-user-info {
+    margin-top: 50px;
+    width: 80vw;
+    height: 200px;
+
+    .staff-admin-info-title {
+      color: #206fe7;
+      margin: 20px;
+    }
+    p {
+      color: white;
+      margin-left: 30px;
+      margin-top: 15px;
+    }
+  }
+  form {
+    margin-left: 30px;
+  }
+  .admin-staff-info-div {
+    height: 200px;
+    width: 80%;
+    display: flex;
+    margin-left: 30px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    .admin-staff-info-back {
+      color: #206fe7;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.uni-nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #323232;
+  color: white;
+  #uni-nav-logout {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: #206fe7;
+    }
+  }
+}

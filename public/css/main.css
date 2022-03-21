@@ -1,61 +1,137 @@
-.home-container {
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  font-size: 10pt;
+  background-color: #323232;
+}
+
+.uni-nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #323232;
+  color: white;
+}
+.uni-nav #uni-nav-logout {
+  color: white;
+  text-decoration: none;
+}
+.uni-nav #uni-nav-logout:hover {
+  color: #206fe7;
+}
+
+.admin-wrapper {
+  height: 100%;
+  width: 100vw;
+  background-color: #323232;
+}
+.admin-wrapper .create-cleaner-wrapper {
+  background-color: #323232;
+  width: 100%;
+  min-width: 80px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  align-self: center;
+  gap: 20px;
 }
-.home-container h1 {
-  font-size: 50px;
-  color: #4fcf5b;
-  margin-top: 40px;
+.admin-wrapper .create-cleaner-wrapper h2 {
+  display: flex;
+  align-self: start;
+  margin-left: 15%;
+  color: #206fe7;
 }
-.home-container .home-form-container {
+.admin-wrapper .create-cleaner-wrapper .create-cleaner-input {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 70%;
-  gap: 10px;
-  margin-top: 10px;
-}
-.home-container .home-form-container h2 {
-  color: #4fcf5b;
-}
-.home-container .home-form-container .home-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  min-width: 180px;
   color: white;
 }
-.home-container .home-form-container .home-form .home-form-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
+.admin-wrapper .create-cleaner-wrapper button {
+  background-color: #206fe7;
 }
-.home-container .home-form-container .home-form .home-form-wrapper .label-input {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.admin-wrapper .all-cleanings-wrapper {
+  width: 100vw;
+  height: 100%;
+  background-color: #323232;
 }
-.home-container .home-form-container .home-form .home-form-wrapper .label-input input {
-  background-color: #c4c4c4;
-  width: 100%;
-  border-radius: 5px;
-  height: 41px;
-  outline: none;
+.admin-wrapper .all-cleanings-wrapper h2 {
+  color: #206fe7;
+  margin-left: 30px;
 }
-.home-container .home-form-container .home-form .home-form-wrapper .submit-button {
-  margin-left: auto;
-  width: 92px;
-  height: 28px;
-  border-radius: 5px;
+.admin-wrapper .all-cleanings-wrapper .all-cleangings-ul {
+  list-style: none;
+  width: 100%;
+}
+.admin-wrapper .all-cleanings-wrapper .all-cleangings-ul .all-cleangings-li {
+  width: 200px;
+  padding-top: 15px;
+}
+.admin-wrapper .all-cleanings-wrapper .all-cleangings-ul .all-cleangings-li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+.admin-wrapper
+  .all-cleanings-wrapper
+  .all-cleangings-ul
+  .all-cleangings-li
+  a:hover {
+  color: #206fe7;
+}
+.admin-wrapper
+  .all-cleanings-wrapper
+  .all-cleangings-ul
+  .all-cleangings-li
+  a
+  button {
+  position: relative;
+  left: 20px;
   background-color: #206fe7;
 }
 
-* {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  margin: 0;
+.staff-admin-info-wrapper {
+  width: 100vw;
+  height: 90vh;
   background-color: #323232;
+  display: flex;
+  flex-direction: column;
+}
+.staff-admin-info-wrapper .staff-admin-user-info {
+  margin-top: 50px;
+  width: 80vw;
+  height: 200px;
+}
+.staff-admin-info-wrapper .staff-admin-user-info .staff-admin-info-title {
+  color: #206fe7;
+  margin: 20px;
+}
+.staff-admin-info-wrapper .staff-admin-user-info p {
+  color: white;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+.staff-admin-info-wrapper form {
+  margin-left: 30px;
+}
+.staff-admin-info-wrapper .admin-staff-info-div {
+  height: 200px;
+  width: 80%;
+  display: flex;
+  margin-left: 30px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.staff-admin-info-wrapper .admin-staff-info-div .admin-staff-info-back {
+  color: #206fe7;
 }
