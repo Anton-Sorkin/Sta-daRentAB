@@ -62,6 +62,13 @@ body{
             color: 2AC030;
         }
 
+        ul{
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
         li{
             display: flex;
             gap: 20px;

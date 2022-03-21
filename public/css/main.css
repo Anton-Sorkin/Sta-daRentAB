@@ -50,6 +50,11 @@ body {
 .userpage-yourCleanings #your-cleanings {
   color: 2AC030;
 }
+.userpage-yourCleanings ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .userpage-yourCleanings li {
   display: flex;
   gap: 20px;
