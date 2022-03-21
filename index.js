@@ -42,7 +42,9 @@ app.get("/", (req, res) => {
 
 // ROUTES
 //all usable routes goes here
-
+app.get("/cleanerpage" , (req, res) => {
+  res.render("cleanerpage")
+})
 // ERROR ROUTE
 //404 route comes last
 
