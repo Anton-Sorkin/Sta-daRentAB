@@ -37,7 +37,7 @@ app.use(express.static("public"));
 
 // HOME
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.render("home");
 });
 
 // ROUTES

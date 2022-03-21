@@ -1,0 +1,61 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.home-container h1 {
+  font-size: 50px;
+  color: #4fcf5b;
+  margin-top: 40px;
+}
+.home-container .home-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  gap: 10px;
+  margin-top: 10px;
+}
+.home-container .home-form-container h2 {
+  color: #4fcf5b;
+}
+.home-container .home-form-container .home-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+}
+.home-container .home-form-container .home-form .home-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.home-container .home-form-container .home-form .home-form-wrapper .label-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.home-container .home-form-container .home-form .home-form-wrapper .label-input input {
+  background-color: #c4c4c4;
+  width: 100%;
+  border-radius: 5px;
+  height: 41px;
+  outline: none;
+}
+.home-container .home-form-container .home-form .home-form-wrapper .submit-button {
+  margin-left: auto;
+  width: 92px;
+  height: 28px;
+  border-radius: 5px;
+  background-color: #206fe7;
+}
+
+* {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  margin: 0;
+  background-color: #323232;
+}
