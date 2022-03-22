@@ -1,13 +1,3 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: 323232;
-}
-
 .userpage-container {
   width: 90%;
   margin: 0 auto;
@@ -31,7 +21,7 @@ body {
   height: 40px;
 }
 .userpage-booking #userpage-booktag {
-  color: 206FE7;
+  color: 206fe7;
 }
 .userpage-booking .userpage-date {
   text-align: center;
@@ -48,7 +38,7 @@ body {
   margin-top: 50px;
 }
 .userpage-yourCleanings #your-cleanings {
-  color: 2AC030;
+  color: 2ac030;
 }
 .userpage-yourCleanings ul {
   display: flex;
@@ -63,11 +53,11 @@ body {
 .userpage-yourCleanings a {
   text-decoration: none;
   font-weight: 100;
-  color: #206FE7;
+  color: #206fe7;
   font-size: 1.2rem;
 }
 .userpage-yourCleanings #userpage-details {
-  background-color: 206FE7;
+  background-color: 206fe7;
   border-radius: 3px;
   border: none;
   color: white;
@@ -82,7 +72,7 @@ body {
   margin-top: 50px;
 }
 .userpage-cleaningHistory #your-oldCleanings {
-  color: #2AC030;
+  color: #2ac030;
 }
 .userpage-cleaningHistory p {
   color: white;
@@ -236,16 +226,6 @@ body {
   color: #206fe7;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: 323232;
-}
-
 .userpage-container {
   width: 90%;
   margin: 0 auto;
@@ -259,6 +239,10 @@ body {
 }
 .userpage-userSection h2 {
   color: white;
+<<<<<<< HEAD
+  font-size: 1.3rem;
+=======
+>>>>>>> 5ee2172770f78edb0ba3e8e324c16160e64b5a51
 }
 
 .userpage-booking {
@@ -269,7 +253,11 @@ body {
   height: 40px;
 }
 .userpage-booking #userpage-booktag {
+<<<<<<< HEAD
+  color: 206fe7;
+=======
   color: 206FE7;
+>>>>>>> 5ee2172770f78edb0ba3e8e324c16160e64b5a51
   font-size: 1.3rem;
 }
 .userpage-booking .userpage-date {
@@ -287,7 +275,7 @@ body {
   margin-top: 50px;
 }
 .userpage-yourCleanings #your-cleanings {
-  color: 2AC030;
+  color: 2ac030;
 }
 .userpage-yourCleanings ul {
   display: flex;
@@ -302,11 +290,11 @@ body {
 .userpage-yourCleanings a {
   text-decoration: none;
   font-weight: 100;
-  color: #206FE7;
+  color: #206fe7;
   font-size: 1.2rem;
 }
 .userpage-yourCleanings #userpage-details {
-  background-color: 206FE7;
+  background-color: 206fe7;
   border-radius: 3px;
   border: none;
   color: white;
@@ -321,7 +309,7 @@ body {
   margin-top: 50px;
 }
 .userpage-cleaningHistory #your-oldCleanings {
-  color: #2AC030;
+  color: #2ac030;
 }
 .userpage-cleaningHistory p {
   color: white;
