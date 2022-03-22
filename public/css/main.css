@@ -259,6 +259,10 @@ body {
 }
 .userpage-userSection h2 {
   color: white;
+<<<<<<< HEAD
+=======
+  font-size: 1.3rem;
+>>>>>>> b4a2616edba5ec7fbe03b9987d29877c6ebd7b3f
 }
 
 .userpage-booking {
@@ -270,6 +274,10 @@ body {
 }
 .userpage-booking #userpage-booktag {
   color: 206FE7;
+<<<<<<< HEAD
+=======
+  font-size: 1.3rem;
+>>>>>>> b4a2616edba5ec7fbe03b9987d29877c6ebd7b3f
 }
 .userpage-booking .userpage-date {
   text-align: center;
