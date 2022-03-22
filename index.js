@@ -42,14 +42,14 @@ app.get("/", (req, res) => {
 
 // ROUTES
 app.get("/userpage", (req, res) => {
-  res.render("userpage")
-})
+  res.render("userpage");
+});
 //all usable routes goes here
 app.use("/admin", adminRoute);
 
-app.get("/cleanerpage" , (req, res) => {
-  res.render("cleanerpage")
-})
+app.get("/cleanerpage", (req, res) => {
+  res.render("cleanerpage");
+});
 // ERROR ROUTE
 //404 route comes last
 
