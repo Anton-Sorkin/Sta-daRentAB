@@ -1,0 +1,43 @@
+<div class="home-container">
+    <h1>StädaFint</h1>
+    <div class="home-form-container">
+        <h2>Logga in</h2>
+        <form class="home-form" action="/login" method="post">
+            <div class="home-form-wrapper">
+                <div class="label-input">
+                    <label for="username">Användarnamn</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div class="label-input">
+                    <label for="password">Lösenord</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <input class="submit-button" type="submit" value="Logga in">
+            </div>
+        </form>
+    </div>
+    <div class="home-form-container">
+        <h2>Skapa nytt konto</h2>
+        <form class="home-form" action="/register" method="post">
+            <div class="home-form-wrapper">
+                <div class="label-input">
+                    <label for="registerUsername">Användarnamn</label>
+                    <input type="text" name="registerUsername" id="registerUsername">
+                </div>
+                <div class="label-input">
+                    <label for="registerPassword">Lösenord</label>
+                    <input type="password" name="registerPassword" id="registerPassword">
+                </div>
+                <div class="label-input">
+                    <label for="confirmPassword">Upprepa lösenord</label>
+                    <input type="confirmPassword" name="confirmPassword" id="confirmPassword">
+                </div>
+                <div class="label-input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <input class="submit-button" type="submit" value="Logga in">
+            </div>
+        </form>
+    </div>
+</div>

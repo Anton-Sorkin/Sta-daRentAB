@@ -14,7 +14,7 @@ const utils = require("./utils/utils.js");
 const app = express();
 
 // ROUTE REQUIREMENTS
-//all routes reqs goes here
+const adminRoute = require("./routes/adminRoute");
 
 // USERSMODEL
 //all models goes here
@@ -37,7 +37,7 @@ app.use(express.static("public"));
 
 // HOME
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.render("bookingPage");
 });
 
 // ROUTES
@@ -45,6 +45,7 @@ app.get("/userpage", (req, res) => {
   res.render("userpage")
 })
 //all usable routes goes here
+app.use("/admin", adminRoute);
 
 // ERROR ROUTE
 //404 route comes last
