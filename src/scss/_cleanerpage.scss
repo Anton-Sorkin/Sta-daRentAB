@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: 323232;
+}
+
+.userpage-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.userpage-userSection{
+
+    display: flex;
+    justify-content: space-between;
+
+    height: 55px;
+    align-items: center;
+
+        h2{
+            color: white;
+        }
+
+}
+
+.userpage-booking{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+
+    height: 40px;
+
+        #userpage-booktag{
+            color: 206FE7;
+        }
+
+        .userpage-date{
+            text-align: center;
+            color: white;
+        }
+
+        input{
+            max-width: 135px;
+        }
+}
+
+.userpage-yourCleanings{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: 50px;
+
+        #your-cleanings{
+            color: 2AC030;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        li{
+            display: flex;
+            gap: 20px;
+
+            align-items: center;
+        }
+
+        a{
+            text-decoration: none;
+            font-weight: 100;
+
+            color: #206FE7;
+
+            font-size: 1.2rem;
+        }
+
+        #userpage-details{
+            background-color: 206FE7;
+            border-radius: 3px;
+
+            border: none;
+            color: white;
+
+            padding: 5px 4px;
+
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            
+        }
+}
+
+.userpage-cleaningHistory{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: 50px;
+
+        #your-oldCleanings{
+            color: #2AC030;
+        }
+
+        p{
+            color: white;
+
+            font-size: 1.2rem;
+        }
+
+        #oldcleanings-list{
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+            margin-top: 10px;
+        }
+}

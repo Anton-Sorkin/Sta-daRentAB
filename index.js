@@ -37,12 +37,19 @@ app.use(express.static("public"));
 
 // HOME
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("bookingPage");
 });
 
 // ROUTES
+app.get("/userpage", (req, res) => {
+  res.render("userpage")
+})
+//all usable routes goes here
 app.use("/admin", adminRoute);
 
+app.get("/cleanerpage" , (req, res) => {
+  res.render("cleanerpage")
+})
 // ERROR ROUTE
 //404 route comes last
 

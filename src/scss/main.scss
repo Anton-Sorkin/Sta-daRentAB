@@ -1,4 +1,7 @@
+@use "userpage";
 @use "home";
+@use "bookingPage";
+@use "cleanerpage";
 
 html,
 body {
@@ -8,6 +11,8 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   scroll-behavior: smooth;
+}
+* {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 10pt;
   background-color: #323232;
