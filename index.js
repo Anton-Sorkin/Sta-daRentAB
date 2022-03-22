@@ -6,6 +6,7 @@ require("dotenv").config();
 const express = require("express");
 const hbars = require("express-handlebars");
 const cParser = require("cookie-parser");
+const jwt = require("jsonwebtoken");
 
 // UTILS
 const utils = require("./utils/utils.js");
@@ -35,6 +36,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cParser());
 app.use(express.static("public"));
 
+app.use((req, res, next) => {
+  const { token } = req.cookies;
+
+  if (token && jwt.verify(token, process.env.JWTSECRET)) {
+    const tokenData = jwt.decode(token, process.env.JWTSECRET);
+    res.locals.loggedIn = true;
+    res.locals.username = tokenData.username;
+    res.locals.role = tokenData.role;
+    res.locals.id = tokenData._id;
+  } else {
+    res.locals.loggedIn = false;
+  }
+  next();
+});
+
 // HOME
 app.get("/", (req, res) => {
   res.render("bookingPage");
@@ -42,14 +58,14 @@ app.get("/", (req, res) => {
 
 // ROUTES
 app.get("/userpage", (req, res) => {
-  res.render("userpage")
-})
+  res.render("userpage");
+});
 //all usable routes goes here
 app.use("/admin", adminRoute);
 
-app.get("/cleanerpage" , (req, res) => {
-  res.render("cleanerpage")
-})
+app.get("/cleanerpage", (req, res) => {
+  res.render("cleanerpage");
+});
 // ERROR ROUTE
 //404 route comes last
 
