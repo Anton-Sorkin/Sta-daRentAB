@@ -1,6 +1,7 @@
 @use "userpage";
 @use "home";
 @use "bookingPage";
+@use "cleanerpage";
 
 html,
 body {
@@ -20,4 +21,3 @@ body {
 @import "./nav.scss";
 @import "./admin.scss";
 @import "./staff-admin-info.scss";
-@use "cleanerpage";
