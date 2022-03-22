@@ -47,6 +47,9 @@ app.get("/userpage", (req, res) => {
 //all usable routes goes here
 app.use("/admin", adminRoute);
 
+app.get("/cleanerpage" , (req, res) => {
+  res.render("cleanerpage")
+})
 // ERROR ROUTE
 //404 route comes last
 
