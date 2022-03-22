@@ -239,7 +239,10 @@
 }
 .userpage-userSection h2 {
   color: white;
+<<<<<<< HEAD
   font-size: 1.3rem;
+=======
+>>>>>>> 5ee2172770f78edb0ba3e8e324c16160e64b5a51
 }
 
 .userpage-booking {
@@ -250,7 +253,11 @@
   height: 40px;
 }
 .userpage-booking #userpage-booktag {
+<<<<<<< HEAD
   color: 206fe7;
+=======
+  color: 206FE7;
+>>>>>>> 5ee2172770f78edb0ba3e8e324c16160e64b5a51
   font-size: 1.3rem;
 }
 .userpage-booking .userpage-date {
