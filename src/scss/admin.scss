@@ -1,5 +1,4 @@
 .admin-wrapper {
-  height: 100%;
   width: 100vw;
   background-color: #323232;
 
@@ -13,7 +12,7 @@
     background-color: #323232;
     width: 100%;
     min-width: 80px;
-    height: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,14 +24,23 @@
       flex-direction: column;
       min-width: 180px;
       color: white;
+      input {
+        background-color: white;
+        width: 100%;
+        border-radius: 5px;
+        height: 41px;
+      }
     }
     button {
+      width: 92px;
+      height: 28px;
+      border-radius: 5px;
       background-color: #206fe7;
     }
   }
   .all-cleanings-wrapper {
     width: 100vw;
-    height: 100%;
+    height: 100px;
     background-color: #323232;
     h2 {
       color: #206fe7;
@@ -45,6 +53,7 @@
       .all-cleangings-li {
         width: 200px;
         padding-top: 15px;
+        margin-left: 30px;
         a {
           position: relative;
           text-decoration: none;

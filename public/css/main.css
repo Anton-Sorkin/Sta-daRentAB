@@ -449,7 +449,6 @@ body {
 }
 
 .admin-wrapper {
-  height: 100%;
   width: 100vw;
   background-color: #323232;
 }
@@ -457,7 +456,7 @@ body {
   background-color: #323232;
   width: 100%;
   min-width: 80px;
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -477,12 +476,21 @@ body {
   min-width: 180px;
   color: white;
 }
+.admin-wrapper .create-cleaner-wrapper .create-cleaner-input input {
+  background-color: white;
+  width: 100%;
+  border-radius: 5px;
+  height: 41px;
+}
 .admin-wrapper .create-cleaner-wrapper button {
+  width: 92px;
+  height: 28px;
+  border-radius: 5px;
   background-color: #206fe7;
 }
 .admin-wrapper .all-cleanings-wrapper {
   width: 100vw;
-  height: 100%;
+  height: 100px;
   background-color: #323232;
 }
 .admin-wrapper .all-cleanings-wrapper h2 {
@@ -496,6 +504,7 @@ body {
 .admin-wrapper .all-cleanings-wrapper .all-cleangings-ul .all-cleangings-li {
   width: 200px;
   padding-top: 15px;
+  margin-left: 30px;
 }
 .admin-wrapper .all-cleanings-wrapper .all-cleangings-ul .all-cleangings-li a {
   position: relative;
@@ -513,7 +522,7 @@ body {
 
 .staff-admin-info-wrapper {
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
   background-color: #323232;
   display: flex;
   flex-direction: column;
@@ -534,6 +543,12 @@ body {
 }
 .staff-admin-info-wrapper form {
   margin-left: 30px;
+}
+.staff-admin-info-wrapper form input {
+  width: 92px;
+  height: 28px;
+  border-radius: 5px;
+  background-color: #206fe7;
 }
 .staff-admin-info-wrapper .admin-staff-info-div {
   height: 200px;
