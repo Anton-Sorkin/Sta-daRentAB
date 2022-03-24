@@ -19,7 +19,11 @@
 
     <div class="userpage-links">
         <ul>
-            <li><a href="#">Tuesday 23/15 17:00-19:00</a> <button id="userpage-details">Detaljer</button></li>
+                {{!-- if städning inte är klar, loopa ut här  --}}
+                {{#each userBookings}}
+                    <li><a href="#">{{date}}</a> <button id="userpage-details">Detaljer</button></li>
+                {{/each}}
+        
         </ul>
     </div>    
 </div>
@@ -30,8 +34,11 @@
     <h2 id="your-oldCleanings">Din Städhistorik</h2>
 
     <div id="oldcleanings-list">
-    <p>Tisdag 23/5 17:00-19:00</p>
-    <p>Tisdag 23/5 17:00-19:00</p>
+        {{!-- if städning inte är klar, loopa ut här --}}
+    {{#each userBookings}}
+    {{#if}}
+    <p>{{date}}</p>
+    {{/each}}
     
     </div>
 </div>

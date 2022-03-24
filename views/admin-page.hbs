@@ -26,9 +26,11 @@
     <div class="all-cleanings-wrapper ">
         <h2>All cleanings</h2>
         <ul class="all-cleangings-ul">
-            <li class="all-cleangings-li"><a href="#">Tuesday 23/3 <button>Detaljer</button></a></li>
-            <li class="all-cleangings-li"><a href="#">Tuesday 23/3 <button>Detaljer</button></a></li>
-            <li class="all-cleangings-li"><a href="#">Tuesday 23/3 <button>Detaljer</button></a></li>
+            {{#each cleaning}}
+            <li class="all-cleangings-li"><a href="#"> {{date}} <button>Detaljer</button></a></li>
+            {{/each}}
         </ul>
     </div>
 </div>
+
+           

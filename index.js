@@ -26,7 +26,11 @@ app.engine(
   hbars.engine({
     extname: "hbs",
     defaultLayout: "main",
-    helpers: {},
+    helpers: {
+      checkIfIdsAreSame: (idOne, idTwo) => {
+        return idOne.toString() == idTwo.toString();
+      },
+    },
   })
 );
 app.set("view engine", "hbs");
