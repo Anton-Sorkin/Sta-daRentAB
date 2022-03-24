@@ -1,7 +1,7 @@
 const express = require("express");
 const utils = require("../utils/utils.js");
 const jwt = require("jsonwebtoken");
-const mongoose = require("mongoose");
+const { ObjectId } = require("mongodb");
 
 const userRouter = express.Router();
 
@@ -67,7 +67,9 @@ userRouter.get("/", async (req, res) => {
   const user = await UserModel.findOne({ _id: _id });
   console.log(user);
 
-  res.render("userpage");
+  const user = await UserModel.findById({ _id });
+
+  res.render("userpage", user);
 });
 
 module.exports = userRouter;
