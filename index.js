@@ -18,6 +18,7 @@ const app = express();
 // ROUTE REQUIREMENTS
 const adminRoute = require("./routes/adminRoute");
 const userRouter = require("./routes/userRouter.js");
+const { default: mongoose } = require("mongoose");
 
 // USERSMODEL
 const userModel = require("./models/UserModel.js");
