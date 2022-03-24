@@ -1,6 +1,7 @@
 // CONFIG
 require("dotenv").config();
-// require("./database.js"); (we add this back when we start with mongoose database)
+
+require("./database.js");
 
 // REQUIREMENTS
 const express = require("express");
@@ -16,9 +17,10 @@ const app = express();
 
 // ROUTE REQUIREMENTS
 const adminRoute = require("./routes/adminRoute");
+const userRouter = require("./routes/userRouter.js");
 
 // USERSMODEL
-//all models goes here
+const userModel = require("./models/UserModel.js");
 
 // VIEW ENGINE
 app.engine(
@@ -33,6 +35,7 @@ app.set("view engine", "hbs");
 
 // MIDDLEWARES
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cParser());
 app.use(express.static("public"));
 
@@ -44,7 +47,7 @@ app.use((req, res, next) => {
     res.locals.loggedIn = true;
     res.locals.username = tokenData.username;
     res.locals.role = tokenData.role;
-    res.locals.id = tokenData._id;
+    res.locals._id = tokenData._id;
   } else {
     res.locals.loggedIn = false;
   }
@@ -53,19 +56,27 @@ app.use((req, res, next) => {
 
 // HOME
 app.get("/", (req, res) => {
-  res.render("bookingPage");
+  res.render("home");
 });
 
 // ROUTES
-app.get("/userpage", (req, res) => {
-  res.render("userpage");
-});
+
 //all usable routes goes here
 app.use("/admin", adminRoute);
+app.use("/user", userRouter);
 
-app.get("/cleanerpage", (req, res) => {
+app.get("/staff", (req, res) => {
   res.render("cleanerpage");
 });
+
+app.get("/staffadmininfo", (req, res) => {
+  res.render("staff-admin-info");
+});
+
+app.get("/booking", (req, res) => {
+  res.render("bookingPage");
+});
+
 // ERROR ROUTE
 //404 route comes last
 
