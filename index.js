@@ -1,6 +1,7 @@
 // CONFIG
 require("dotenv").config();
-// require("./database.js"); (we add this back when we start with mongoose database)
+require("./database.js");
+
 
 // REQUIREMENTS
 const express = require("express");
@@ -16,6 +17,8 @@ const app = express();
 
 // ROUTE REQUIREMENTS
 const adminRoute = require("./routes/adminRoute");
+const { default: mongoose } = require("mongoose");
+
 
 // USERSMODEL
 //all models goes here
