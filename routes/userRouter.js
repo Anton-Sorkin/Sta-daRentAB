@@ -64,7 +64,7 @@ userRouter.post("/register", async (req, res) => {
 // === READ === //
 userRouter.get("/", async (req, res) => {
   const _id = mongoose.Types.ObjectId(res.locals._id);
-  const user = UserModel.findOne({ _id: _id }).lean();
+  const user = UserModel.findOne({ _id: _id });
   console.log(user.username);
 
   res.render("userpage");
