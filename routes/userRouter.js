@@ -1,7 +1,7 @@
 const express = require("express");
 const utils = require("../utils/utils.js");
 const jwt = require("jsonwebtoken");
-const mongoose = require("mongoose");
+const { ObjectId } = require("mongodb");
 
 const userRouter = express.Router();
 
@@ -63,11 +63,11 @@ userRouter.post("/register", async (req, res) => {
 
 // === READ === //
 userRouter.get("/", async (req, res) => {
-  const _id = mongoose.Types.ObjectId(res.locals._id);
-  const user = UserModel.findOne({ _id: _id });
-  console.log(user.username);
+  const _id = ObjectId(res.locals._id);
 
-  res.render("userpage");
+  const user = await UserModel.findById({ _id });
+
+  res.render("userpage", user);
 });
 
 module.exports = userRouter;
