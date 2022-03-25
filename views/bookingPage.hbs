@@ -1,21 +1,26 @@
 <div class="booking-container">
     <h2>Boka en städning</h2>
     <div class="booking-form-container">
-        <form class="booking-form" action="/book" method="post">
+        <form class="booking-form" action="/user/booking" method="post">
             <div class="booking-form-wrapper">
                 <div class="time-cleanig-type-container">
-                    <div class="time-label-input">
-                        <label for="time">Tid</label>
-                        <input type="time" name="time" id="time" min="07:00" max="16:00" required>
-                    </div>
                     <div class="label-input">
                         <label for="cleaningType">Typ av städning</label>
                         <select name="cleaningType" id="cleaningType" required>
-                            <option value="">-- Välj typ av städning --</option>
+                            <option value="">Städning</option>
                             <option value="basicStädning">Basic Städning</option>
                             <option value="toppStädning">Topp Städning</option>
                             <option value="diamantStädning">Diamant Städning</option>
                             <option value="fönstertvät">Fönstertvät</option>
+                        </select>
+                    </div>
+                    <div class="label-input">
+                        <label for="staffId">Välj Städare</label>
+                        <select name="staffId" id="staffId">
+                            <option value="">Städare</option>
+                            {{#each avalibleStaff}}
+                            <option value="{{_id}}">{{userName}}</option>
+                            {{/each}}
                         </select>
                     </div>
                 </div>
@@ -39,10 +44,14 @@
                     <label for="contactPhone">Kontaktpersons telefonnummer</label>
                     <input type="tel" name="contactPhone" id="contactPhone" required>
                 </div>
+
+                <input type="hidden" name="date" value="{{date}}">
+                <input type="hidden" name="customerId" value="{{customerId}}">
                 <div class="submit-container">
                     <h3><a class="home" href="/">Tillbaka</a></h3>
                     <input class="submit-button" type="submit" value="Boka">
                 </div>
+
             </div>
         </form>
 

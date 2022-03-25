@@ -224,6 +224,13 @@ body {
   height: 41px;
   outline: none;
 }
+.booking-container .booking-form .booking-form-wrapper .label-input select {
+  background-color: #c4c4c4;
+  width: 100%;
+  border-radius: 5px;
+  height: 41px;
+  outline: none;
+}
 .booking-container .booking-form .booking-form-wrapper .submit-container {
   width: 100%;
   display: flex;

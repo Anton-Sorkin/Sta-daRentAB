@@ -4,10 +4,13 @@ const staffSchema = new mongoose.Schema({
   userName: { type: String },
   password: { type: String },
   email: { type: String },
-  bookings: {type: []},
-  role: {type: String}
+  role: { type: String },
+  staffId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Staff",
+  },
 });
 
-const staffModel = mongoose.model("Staff", staffSchema);
+const StaffModel = mongoose.model("Staff", staffSchema);
 
-module.exports = staffModel;
+module.exports = StaffModel;

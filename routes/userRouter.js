@@ -6,6 +6,8 @@ const { ObjectId } = require("mongodb");
 const userRouter = express.Router();
 
 const UserModel = require("../models/UserModel.js");
+const BookingModel = require("../models/BookingModel.js");
+const StaffModel = require("../models/staffModel");
 
 // === LOGIN === //
 
@@ -36,7 +38,6 @@ userRouter.post("/login", async (req, res) => {
 });
 
 // === CREATE === //
-
 userRouter.post("/register", async (req, res) => {
   const { username, email, password, confirmPassword } = req.body;
 
@@ -57,8 +58,66 @@ userRouter.post("/register", async (req, res) => {
       }
     });
   } else {
-    res.sendStatus(409);
+    res.sendStatus(403);
   }
+});
+
+// === CREATE BOOKING === //
+userRouter.post("/dateselect", async (req, res) => {
+  const date = req.body.date;
+  const customerId = res.locals._id;
+
+  const bookings = await BookingModel.find({ date: date }).lean();
+
+  const occupied = bookings.map((staff) => {
+    return staff.staffId;
+  });
+
+  const avalibleStaff = await StaffModel.find({
+    _id: { $nin: occupied },
+  })
+    .populate("staffId")
+    .lean();
+
+  res.render("bookingPage", { date, avalibleStaff, customerId });
+});
+
+userRouter.post("/booking", async (req, res) => {
+  /* const date = "2022-03-24"; */
+  const {
+    cleaningType,
+    address,
+    zipCode,
+    location,
+    contactPerson,
+    contactPhone,
+    staffId,
+    date,
+    customerId,
+  } = req.body;
+
+  /* const bookings = await BookingModel.find({ date: date });
+  const occupied = bookings.map((staff) => staff.staffId);
+  const avalibleStaff = await StaffModel.find({ _id: { $nin: occupied } }); */
+
+  //console.log(avalibleStaff);
+
+  const newBooking = new BookingModel({
+    cleaningType,
+    address,
+    zipCode,
+    location,
+    contactPerson,
+    contactPhone,
+    staffId,
+    date,
+    customerId,
+    done: false,
+  });
+
+  await newBooking.save();
+
+  res.redirect("/user");
 });
 
 // === READ === //

@@ -3,36 +3,44 @@
 <div class="userpage-container">
 
 
-<div class="userpage-booking">
-    <h2 id="userpage-booktag">Boka en städning </h2>
-    <form>
-        <div class="userpage-date">
-            <label id="userpage-date">Datum</label>
-        </div>
-        <input type="date">
-    </form>
-</div>
-
-
-<div class="userpage-yourCleanings">
-    <h2 id="your-cleanings">Dina städningar</h2>
-
-    <div class="userpage-links">
-        <ul>
-            <li><a href="#">Tuesday 23/15 17:00-19:00</a> <button id="userpage-details">Detaljer</button></li>
-        </ul>
-    </div>    
-</div>
-
-
-
-<div class="userpage-cleaningHistory">
-    <h2 id="your-oldCleanings">Din Städhistorik</h2>
-
-    <div id="oldcleanings-list">
-    <p>Tisdag 23/5 17:00-19:00</p>
-    <p>Tisdag 23/5 17:00-19:00</p>
-    
+    <div class="userpage-booking">
+        {{!-- <h2 id="userpage-booktag">Boka en städning </h2>
+        <form>
+            <div class="userpage-date">
+                <label id="userpage-date">Datum</label>
+            </div>
+            <input type="date">
+        </form> --}}
+        <h2 id="userpage-booktag">Boka en städning </h2>
+        <form action="/user/dateselect" method="post">
+            <div class="userpage-date">
+                <label for="date" id="userpage-date">Datum</label>
+            </div>
+            <input type="date" name="date" id="date">
+            <input type="submit" value="Boka">
+        </form>
     </div>
-</div>
+
+
+    <div class="userpage-yourCleanings">
+        <h2 id="your-cleanings">Dina städningar</h2>
+
+        <div class="userpage-links">
+            <ul>
+                <li><a href="#">Tuesday 23/15 17:00-19:00</a> <button id="userpage-details">Detaljer</button></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="userpage-cleaningHistory">
+        <h2 id="your-oldCleanings">Din Städhistorik</h2>
+
+        <div id="oldcleanings-list">
+            <p>Tisdag 23/5 17:00-19:00</p>
+            <p>Tisdag 23/5 17:00-19:00</p>
+
+        </div>
+    </div>
 </div>
