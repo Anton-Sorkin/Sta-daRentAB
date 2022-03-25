@@ -153,6 +153,9 @@ body {
   border-radius: 5px;
   background-color: #206fe7;
 }
+.home-container .home-form-container .staff-login-link {
+  color: white;
+}
 
 .booking-container {
   display: flex;

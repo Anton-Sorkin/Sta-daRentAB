@@ -37,6 +37,29 @@ userRouter.post("/login", async (req, res) => {
   });
 });
 
+// === LOGIN STAFF === //
+userRouter.get("/staff/login", (req, res) => {
+  res.render("staff-login");
+});
+
+userRouter.post("/staff/login", async (req, res) => {
+  const { userName, password } = req.body;
+
+  StaffModel.findOne({ userName }, (err, user) => {
+    if (user && password === user.password) {
+      const userData = {
+        _id: user._id,
+        userName,
+        role: user.role,
+      };
+      const accessToken = jwt.sign(userData, process.env.JWTSECRET);
+      res.cookie("token", accessToken);
+
+      res.redirect("/staff");
+    }
+  });
+});
+
 // === CREATE === //
 userRouter.post("/register", async (req, res) => {
   const { username, email, password, confirmPassword } = req.body;
