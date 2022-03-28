@@ -60,6 +60,12 @@ userRouter.post("/staff/login", async (req, res) => {
   });
 });
 
+// === LOGOUT === //
+userRouter.post("/logout", (req, res) => {
+  res.clearCookie("token");
+  res.redirect("/");
+});
+
 // === CREATE === //
 userRouter.post("/register", async (req, res) => {
   const { username, email, password, confirmPassword } = req.body;

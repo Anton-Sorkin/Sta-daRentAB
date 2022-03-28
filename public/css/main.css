@@ -451,6 +451,9 @@ body {
   color: white;
 }
 .uni-nav #uni-nav-logout {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
   color: white;
   text-decoration: none;
 }

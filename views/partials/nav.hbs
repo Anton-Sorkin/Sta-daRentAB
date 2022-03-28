@@ -1,6 +1,10 @@
 <div class="uni-nav">
   <h2>Username</h2>
   {{!-- change to {{username}} when avalible --}}
-  <a href="#" id="uni-nav-logout"><h2>Logout</h2></a>
-  {{! change link to relevant when crud is fixed  }}
+  <form id="uni-nav-logout" action="/user/logout" method="post">
+    <button type="submit" id="uni-nav-logout">
+      <h2>Logout</h2>
+    </button>
+  </form>
+
 </div>
