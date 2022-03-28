@@ -155,7 +155,10 @@ userRouter.get("/", async (req, res) => {
 
   const user = await UserModel.findById({ _id });
 
-  res.render("userpage", user);
+  const completedCleanings = await BookingModel.find({done: true}).lean()
+  const uncompletedCleanings = await BookingModel.find({done: false}).lean()
+
+  res.render("userpage", {completedCleanings, user, uncompletedCleanings});
 });
 
 module.exports = userRouter;
