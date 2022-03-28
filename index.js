@@ -22,6 +22,8 @@ const { default: mongoose } = require("mongoose");
 
 // USERSMODEL
 const userModel = require("./models/UserModel.js");
+const StaffModel = require("./models/staffModel.js");
+const BookingModel = require("./models/BookingModel.js");
 
 // VIEW ENGINE
 app.engine(
@@ -66,8 +68,13 @@ app.get("/", (req, res) => {
 app.use("/admin", adminRoute);
 app.use("/user", userRouter);
 
-app.get("/staff", (req, res) => {
-  res.render("cleanerpage");
+app.get("/staff", async (req, res) => {
+  const _id = res.locals._id;
+
+  const staff = await StaffModel.find({ _id: _id });
+  const cleanings = await BookingModel.find({ staffId: _id }).lean();
+
+  res.render("cleanerpage", { staff, cleanings });
 });
 
 app.get("/staffadmininfo", (req, res) => {
