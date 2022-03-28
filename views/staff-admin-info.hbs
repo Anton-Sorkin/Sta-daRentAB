@@ -3,10 +3,12 @@
 
 <div class="staff-admin-user-info">
     <h1 class="staff-admin-info-title">Städning</h1>
-      <p>Appleroad 1</p> {{!-- change to {{adress}} --}}
-      <p>12345 Dallas</p> {{!-- change to {{area}} --}}
-      <p>tisdag 32/3</p> {{!-- change to {{date}} --}}
-      <p>Silver städning</p> {{!-- change to {{type}} --}}
+    {{#each bookings}}
+      <p>{{address}}</p> 
+      <p>{{zipCode}} {{location}}</p>
+      <p>{{bookings.date}}</p> 
+      <p>{{cleaningType}}</p> 
+    {{/each}}
     </div>
 
     <form action="/" method="post">
@@ -14,6 +16,6 @@
     </form>
 
     <div class="admin-staff-info-div">
-        <a href="#" class="admin-staff-info-back">Go back</a>
+        <a href="/admin" class="admin-staff-info-back">Go back</a>
     </div>
 </div>

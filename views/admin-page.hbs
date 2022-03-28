@@ -31,9 +31,10 @@
     <div class="all-cleanings-wrapper ">
         <h2>Alla städningar</h2>
         <ul class="all-cleangings-ul">
-            <li class="all-cleangings-li"><a href="#">Tuesday 23/3 <button>Detaljer</button></a></li>
-            <li class="all-cleangings-li"><a href="#">Tuesday 23/3 <button>Detaljer</button></a></li>
-            <li class="all-cleangings-li"><a href="#">Tuesday 23/3 <button>Detaljer</button></a></li>
+            {{#each bookings}}
+                <li class="all-cleangings-li"><a href="/admin/info/{{_id}}"> {{date}} <button>Detaljer</button></a></li>
+            {{/each}}
         </ul>
     </div>
 </div>
+        
