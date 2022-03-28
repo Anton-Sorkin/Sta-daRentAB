@@ -3,28 +3,34 @@
 <div class="userpage-container">
 
 
-<div class="userpage-yourCleanings">
-    <h2 id="your-cleanings">Kommande städningar</h2>
+    <div class="userpage-yourCleanings">
+        <h2 id="your-cleanings">Kommande städningar</h2>
 
-    <div class="userpage-links">
-        <ul>
-            <li><a href="#">Tuesday 23/15 17:00-19:00</a> <button id="userpage-details">Detaljer</button></li>
-            <li><a href="#">Tuesday 23/15 17:00-19:00</a> <button id="userpage-details">Detaljer</button></li>
-            <li><a href="#">Tuesday 23/15 17:00-19:00</a> <button id="userpage-details">Detaljer</button></li>
-        </ul>
-    </div>    
-</div>
-
-
-
-<div class="userpage-cleaningHistory">
-    <h2 id="your-oldCleanings">Slutförda städningar</h2>
-
-    <div id="oldcleanings-list">
-    <p>Tisdag 23/5 17:00-19:00</p>
-    <p>Tisdag 23/5 17:00-19:00</p>
-    <p>Tisdag 23/5 17:00-19:00</p>
-    
+        <div class="userpage-links">
+            <ul>
+                {{#each cleanings}}
+                {{#if done}}
+                {{else}}
+                <li><a href="/{{_id}}">{{date}} <button id="userpage-details">Detaljer</button></a></li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
-</div>
+
+
+
+    <div class="userpage-yourCleanings">
+        <h2 id="your-cleanings">Slutförda städningar</h2>
+
+        <div id="uuserpage-links">
+            <ul>
+                {{#each cleanings}}
+                {{#if done}}
+                <li><a href="/{{_id}}">{{date}} <button id="userpage-details">Detaljer</button></a></li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 </div>
