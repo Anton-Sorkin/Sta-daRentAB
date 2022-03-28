@@ -7,8 +7,12 @@
   background-color: #323232;
   color: white;
   #uni-nav-logout {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
     color: white;
     text-decoration: none;
+
     &:hover {
       color: #206fe7;
     }
