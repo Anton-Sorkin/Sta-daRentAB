@@ -162,4 +162,21 @@ userRouter.get("/", async (req, res) => {
   res.render("userpage", { completedCleanings, user, uncompletedCleanings });
 });
 
+// === USER SINGLE CLEANING === //
+userRouter.get("/single/:id", async (req, res) => {
+  const _id = req.params.id;
+
+  const singleCleaning = await BookingModel.find({ _id: _id }).lean();
+  console.log(singleCleaning);
+
+  res.render("single-cleaning-customer", { singleCleaning });
+});
+
+userRouter.post("/cleaning/:id", async (req, res) => {
+  console.log(req.params.id);
+
+  await BookingModel.findByIdAndDelete(req.params.id);
+  res.redirect("/user");
+});
+
 module.exports = userRouter;

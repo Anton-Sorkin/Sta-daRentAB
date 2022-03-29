@@ -1,0 +1,14 @@
+<div class="single-container">
+    <h2>Städning</h2>
+    <div class="user-cleaning-info">
+        {{#each singleCleaning}}
+        <p>{{address}}</p>
+        <p>{{zipCode}} {{location}}</p>
+        <p>{{date}}</p>
+        <p>{{cleaningType}}</p>
+        <form action="/user/cleaning/{{_id}}" method="post">
+            <input class="cancel-button" type="submit" value="Avboka">
+        </form>
+        {{/each}}
+    </div>
+</div>
