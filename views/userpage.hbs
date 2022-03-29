@@ -28,7 +28,8 @@
         <div class="userpage-links">
             <ul>
                 {{#each uncompletedCleanings}}
-                <li><a href="user/info/{{_id}}">{{cleaningType}} {{date}} <button id="userpage-details">Detaljer</button></a></li>
+                <li><a href="user/single/{{_id}}">{{cleaningType}} {{date}} <button
+                            id="userpage-details">Detaljer</button></a></li>
                 {{/each}}
             </ul>
         </div>
@@ -43,7 +44,7 @@
             {{#each completedCleanings}}
             <p>{{cleaningType}} {{date}}</p>
             {{/each}}
-        
+
 
         </div>
     </div>
