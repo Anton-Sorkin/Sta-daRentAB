@@ -53,12 +53,12 @@ router.post("/", async (req, res) => {
 });
 
 //post a change to value to info/id to mark it as done
-router.post("/info/:id", async (req, res) => {
-  const { isDone } = req.body;
-  await staffModel.findByIdAndUpdate(req.params.id, { isDone });
-  //inte klar|||||
-  res.redirect("/admin");
-});
+// router.post("/info/:id", async (req, res) => {
+//   const { isDone } = req.body;
+//   await staffModel.findByIdAndUpdate(req.params.id, { isDone });
+//   //inte klar|||||
+//   res.redirect("/admin");
+// });
 
 //EXPORTS
 module.exports = router;
