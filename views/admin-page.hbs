@@ -32,7 +32,7 @@
         <h2>Alla städningar</h2>
         <ul class="all-cleangings-ul">
             {{#each bookings}}
-                <li class="all-cleangings-li"><a href="/admin/info/{{_id}}"> {{date}} <button>Detaljer</button></a></li>
+                <li class="all-cleangings-li"><a href="/admin/info/{{_id}}"> {{date}} {{contactPerson}} <button>Detaljer</button></a></li>
             {{/each}}
         </ul>
     </div>

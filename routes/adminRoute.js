@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
 
 //get admin info page with users
 router.get("/info/:id", async (req, res) => {
-  const staff = await staffModel.find().lean();
+  // const staff = await staffModel.find().lean();
   const bookings = await BookingModel.find().lean();
 
   const { token } = req.cookies;
