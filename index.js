@@ -31,7 +31,13 @@ app.engine(
   hbars.engine({
     extname: "hbs",
     defaultLayout: "main",
-    helpers: {},
+    helpers: {
+      checkIfStaff: (role) => {
+        if (role === "staff") {
+          return true;
+        }
+      },
+    },
   })
 );
 app.set("view engine", "hbs");

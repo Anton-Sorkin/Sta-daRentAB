@@ -1,19 +1,20 @@
 {{>nav}}
 <div class="staff-admin-info-wrapper">
 
-<div class="staff-admin-user-info">
-    <h1 class="staff-admin-info-title">Städning</h1>
-    {{#each booking}}
-      <p>{{address}}</p> 
-      <p>{{zipCode}} {{location}}</p>
-      <p>{{date}}</p> 
-      <p>{{cleaningType}}</p> 
-    {{/each}}
+    <div class="staff-admin-user-info">
+        <h1 class="staff-admin-info-title">Städning</h1>
+        {{#each booking}}
+        <p>{{address}}</p>
+        <p>{{zipCode}} {{location}}</p>
+        <p>{{date}}</p>
+        <p>{{cleaningType}}</p>
+        <form action="/admin/toggle/done/{{_id}}" method="post">
+            <input type="submit" value="Klar">
+        </form>
+        {{/each}}
+
     </div>
 
-    <form action="/" method="post">
-        <input type="submit" value="Klar">
-    </form>
 
     <div class="admin-staff-info-div">
         <a href="/admin" class="admin-staff-info-back">Go back</a>

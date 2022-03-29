@@ -11,7 +11,7 @@
                 {{#each cleanings}}
                 {{#if done}}
                 {{else}}
-                <li><a href="/{{_id}}">{{date}} <button id="userpage-details">Detaljer</button></a></li>
+                <li><a href="/admin/info/{{_id}}">{{date}} <button id="userpage-details">Detaljer</button></a></li>
                 {{/if}}
                 {{/each}}
             </ul>
@@ -27,7 +27,7 @@
             <ul>
                 {{#each cleanings}}
                 {{#if done}}
-                <li><a href="/{{_id}}">{{date}} <button id="userpage-details">Detaljer</button></a></li>
+                <li><a href="/admin/info/{{_id}}">{{date}} <button id="userpage-details">Detaljer</button></a></li>
                 {{/if}}
                 {{/each}}
             </ul>

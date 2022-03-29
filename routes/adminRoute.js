@@ -2,6 +2,7 @@
 const express = require("express");
 const staffModel = require("../models/staffModel");
 const BookingModel = require("../models/BookingModel");
+const UserModel = require("../models/UserModel.js");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
 
@@ -52,13 +53,16 @@ router.post("/", async (req, res) => {
   }
 });
 
-//post a change to value to info/id to mark it as done
-// router.post("/info/:id", async (req, res) => {
-//   const { isDone } = req.body;
-//   await staffModel.findByIdAndUpdate(req.params.id, { isDone });
-//   //inte klar|||||
-//   res.redirect("/admin");
-// });
+router.post("/toggle/done/:id", async (req, res) => {
+  const booking = await BookingModel.find({ _id: req.params.id });
+
+  await BookingModel.updateOne(booking, { $set: { done: !booking.done } });
+  if (res.locals.role === "admin") {
+    res.redirect("/admin");
+  } else {
+    res.redirect("/staff");
+  }
+});
 
 //EXPORTS
 module.exports = router;

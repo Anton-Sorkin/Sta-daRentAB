@@ -55,8 +55,11 @@ userRouter.post("/staff/login", async (req, res) => {
       };
       const accessToken = jwt.sign(userData, process.env.JWTSECRET);
       res.cookie("token", accessToken);
-
-      res.redirect("/staff");
+      if (user.role === "admin") {
+        res.redirect("/admin");
+      } else {
+        res.redirect("/staff");
+      }
     }
   });
 });
@@ -84,7 +87,7 @@ userRouter.post("/register", async (req, res) => {
         });
 
         await newUser.save();
-        res.redirect("/user");
+        res.redirect("/");
       }
     });
   } else {
@@ -156,10 +159,15 @@ userRouter.get("/", async (req, res) => {
 
   const user = await UserModel.findById({ _id });
 
-  const completedCleanings = await BookingModel.find({ done: true }).lean();
-  const uncompletedCleanings = await BookingModel.find({ done: false }).lean();
+  const userCleanings = await BookingModel.find({ customerId: _id }).lean();
 
-  res.render("userpage", { completedCleanings, user, uncompletedCleanings });
+  /* const completedCleanings = await BookingModel.find({ done: true }).lean();
+  const uncompletedCleanings = await BookingModel.find({ done: false }).lean(); */
+
+  res.render("userpage", {
+    userCleanings,
+    user,
+  });
 });
 
 // === USER SINGLE CLEANING === //

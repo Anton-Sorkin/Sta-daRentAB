@@ -19,7 +19,9 @@
                         <select name="staffId" id="staffId">
                             <option value="">Städare</option>
                             {{#each avalibleStaff}}
+                            {{#if (checkIfStaff role) }}
                             <option value="{{_id}}">{{username}}</option>
+                            {{/if}}
                             {{/each}}
                         </select>
                     </div>
