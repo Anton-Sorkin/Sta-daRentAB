@@ -43,13 +43,14 @@ userRouter.get("/staff/login", (req, res) => {
 });
 
 userRouter.post("/staff/login", async (req, res) => {
-  const { userName, password } = req.body;
+  const { username, password } = req.body;
+  console.log(req.body);
 
-  StaffModel.findOne({ userName }, (err, user) => {
+  StaffModel.findOne({ username }, (err, user) => {
     if (user && password === user.password) {
       const userData = {
         _id: user._id,
-        userName,
+        username,
         role: user.role,
       };
       const accessToken = jwt.sign(userData, process.env.JWTSECRET);

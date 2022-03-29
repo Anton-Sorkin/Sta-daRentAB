@@ -37,7 +37,7 @@ router.get("/info/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const newStaff = new staffModel({
-    userName: req.body.username,
+    username: req.body.username,
     password: req.body.password,
     email: req.body.email,
     role: "staff",
