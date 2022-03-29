@@ -43,6 +43,14 @@ body {
   background-color: #c4c4c4;
   border-radius: 5px;
 }
+.userpage-booking #bokabtn {
+  background-color: 206fe7;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  padding: 5px 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 .userpage-yourCleanings {
   display: flex;

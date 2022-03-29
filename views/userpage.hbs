@@ -17,7 +17,7 @@
                 <label for="date" id="userpage-date">Datum</label>
             </div>
             <input type="date" name="date" id="date">
-            <input type="submit" value="Boka">
+            <input type="submit" value="Boka" id="bokabtn">
         </form>
     </div>
 
@@ -27,7 +27,9 @@
 
         <div class="userpage-links">
             <ul>
-                <li><a href="#">Tuesday 23/15 17:00-19:00</a> <button id="userpage-details">Detaljer</button></li>
+                {{#each uncompletedCleanings}}
+                <li><a href="user/info/{{_id}}">{{cleaningType}} {{date}} <button id="userpage-details">Detaljer</button></a></li>
+                {{/each}}
             </ul>
         </div>
     </div>
@@ -38,8 +40,10 @@
         <h2 id="your-oldCleanings">Din Städhistorik</h2>
 
         <div id="oldcleanings-list">
-            <p>Tisdag 23/5 17:00-19:00</p>
-            <p>Tisdag 23/5 17:00-19:00</p>
+            {{#each completedCleanings}}
+            <p>{{cleaningType}} {{date}}</p>
+            {{/each}}
+        
 
         </div>
     </div>
