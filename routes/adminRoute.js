@@ -23,13 +23,13 @@ router.get("/", async (req, res) => {
 
 //get admin info page with users
 router.get("/info/:id", async (req, res) => {
-  // const staff = await staffModel.find().lean();
-  const bookings = await BookingModel.find().lean();
+  const _id = req.params.id; //gets the id from url
+  const booking = await BookingModel.find({ _id: _id }).lean(); //finds the booking with that url id from database
 
   const { token } = req.cookies;
 
   if (token && jwt.verify(token, process.env.JWTSECRET)) {
-    res.render("staff-admin-info", { bookings });
+    res.render("staff-admin-info", { booking }); //sends that specific booking with matching id to staff
   } else {
     res.redirect("/admin");
   }
